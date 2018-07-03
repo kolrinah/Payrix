@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Success{% endblock %}
+
+{% block body %}
+    <div class="jumbotron">
+        <h1 class="display-4">Successful Registration!</h1>
+        <p class="lead">User {{ user }} has been successfully registered.</p>
+        <hr class="my-4">
+        <p>Click button below if you want to register a new one.</p>
+        <a class="btn btn-primary btn-lg" href="{{ path('register')  }}" role="button">New User</a>
+    </div>
+
+{% endblock %}
