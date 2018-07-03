@@ -1,0 +1,36 @@
+# 1st - Go to http host folder on your LAMP server
+# (i.e. cd /var/www/html)
+$ cd /[your vhost http folder]
+
+# 2nd - Be sure that git be previously installed and clone the repository
+$ git clone git://github.com/kolrinah/payrix.git
+
+# 3rd - Go to payrix folder
+$ cd payrix
+
+# 4th - Run composer to download dependences
+$ composer install
+
+# 5th - Grant 777 rights to var folder
+$ sudo chmod 777 var -R
+
+# 6th - Edit .env file to set DATABASE_URL with credentials for database connection
+$ nano .env
+
+# 7th - Run console commands to create database
+$ php bin/console doctrine:database:create
+
+# 8th - Run SQL scripts to create tables on database from Payrix.sql dump file
+
+# 9th - Open web-app with a browser to Register users
+http://35.225.244.222/payrix/public/index.php/register
+
+# 10th - to login users
+http://35.225.244.222/payrix/public/index.php/login
+
+# 11th - CLI Command. Go to console server 
+$ php bin/console payrix:check-user --multi=true
+
+
+
+
