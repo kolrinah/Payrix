@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Success Login{% endblock %}
+
+{% block body %}
+    <div class="jumbotron">
+        <h1 class="display-4">Successful Login!</h1>
+        <p class="lead">User {{ user }} has been successfully Logged in.</p>
+        <hr class="my-4">
+        <p>Click button below if you want to login in behalf another one.</p>
+        <a class="btn btn-primary btn-lg" href="{{ path('login')  }}" role="button">New Login</a>
+    </div>
+
+{% endblock %}
